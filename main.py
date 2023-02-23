@@ -5,12 +5,12 @@ import nltk
 nltk.download('words')
 from nltk.corpus import words
 
-def print_menu():
+def print_menu(): 
   print("\nLet's play Wordle:")
   print("Type a 5 letter word and hit enter!\n")
 
 def read_random_word():
-  with open("scratch.txt") as f:
+  with open("hogwarts.txt") as f:
     words = f.read().splitlines()
     return random.choice(words)
 
@@ -23,8 +23,8 @@ while play_again != "q":
   print_menu()
   ## Second number is exclusive in range()
   
-  # word = read_random_word()
-  word = random.choice(words_five)
+  word = read_random_word()
+  # word = random.choice(words_five)
   for attempt in range(1, 7):
     guess = input().lower()
   
